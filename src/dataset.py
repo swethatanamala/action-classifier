@@ -8,7 +8,6 @@ from . import transforms as tsfms
 
 class CookingDataset(Dataset):
     def __init__(self, data_folder, mode="train", data_limit=None, transforms=None):
-        self.transforms = transforms
         self.data_folder = data_folder
         self.all_images = sorted(glob(f"{data_folder}/*/*/*.jpg"))
         self.mode = mode
